@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Valentine — For You ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio id="music" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<main class="stage">
+
+  <!-- HEART -->
+  <section id="heartStage" class="center">
+    <div id="heartWrap" class="heart-wrap">
+      <svg viewBox="0 0 200 180" class="heart heartbeat">
+        <g id="leftHalf">
+          <rect x="40" y="20" width="40" height="40"/>
+          <rect x="20" y="60" width="40" height="40"/>
+          <rect x="40" y="60" width="40" height="40"/>
+          <rect x="60" y="60" width="40" height="40"/>
+          <rect x="40" y="100" width="40" height="40"/>
+        </g>
+        <g id="rightHalf">
+          <rect x="120" y="20" width="40" height="40"/>
+          <rect x="100" y="60" width="40" height="40"/>
+          <rect x="120" y="60" width="40" height="40"/>
+          <rect x="140" y="60" width="40" height="40"/>
+          <rect x="120" y="100" width="40" height="40"/>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <!-- MESSAGE -->
+  <section id="message" class="center hidden">
+    <h1>Happy Valentine’s Day Mommy 🍒</h1>
+    <button onclick="showQuestion()">Next</button>
+  </section>
+
+  <!-- QUESTION -->
+  <section id="question" class="center hidden">
+    <h2>Will you be my Valentine? 💘</h2>
+    <button onclick="startLetter()">Yes baby 💖</button>
+    <button onclick="showPlease()">No</button>
+  </section>
+
+  <!-- PLEASE -->
+  <section id="please" class="center hidden">
+    <h2>Please say yes baby 🥹</h2>
+    <button onclick="startLetter()">Okay… yes ❤️</button>
+  </section>
+
+  <!-- LETTER -->
+  <section id="letter" class="center hidden">
+    <div class="card">
+      <h2>✉️ A Letter for You</h2>
+      <div id="letterText"></div>
+
+      <div id="photos" class="hidden">
+        <img id="photo">
+        <button onclick="nextPhoto()">Next Photo</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- END -->
+  <section id="ending" class="center hidden">
+    <h1>Forever isn’t long enough with you ♾️</h1>
+  </section>
+
+</main>
+
+<div id="flowers"></div>
+<div id="hearts"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
